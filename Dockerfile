@@ -1,6 +1,6 @@
 FROM registry.astralinux.ru/astra/ubi18
-ARG UID=1380800054
-ARG GID=1380800053
+ARG UID=1001
+ARG GID=1001
 # add our user and group first to make sure their IDs get assigned consistently, regardless of wh>
 RUN groupadd -r unbound -g ${GID} && useradd -u ${UID} -c "systemuser for unbound service" -r -g unbound unbound -d /unbound
 WORKDIR /unbound
